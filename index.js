@@ -1,11 +1,8 @@
-
-document.getElementById("click1").addEventListener("click", function() {
-
-    fetch("https://apis.scrimba.com/bored/api/activity")
-      .then(res => res.json())
-      .then(data => { document.getElementById("img").textContent = data.activity })
-})
-
-
-
-
+fetch("https://apis.scrimba.com/jsonplaceholder/posts")
+  .then(res => res.json())
+  .then(data => {
+    
+    const allArr = data.slice(0, 5)
+    document.getElementById("img").innerHTML= allArr
+    
+    console.log(data.slice(0, 5))})
